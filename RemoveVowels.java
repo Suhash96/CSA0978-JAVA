@@ -1,18 +1,18 @@
 import java.util.Scanner;
-class exception
-{
-public static void main(String [] args)
-{
-try
-{
-String s = "abcd123";
-String s1 = "";
-s1 = s.replaceAll("[aeiou]", ""); 
-System.out.println("String after removing vowel : "+s1);
-}
-catch (Exception e)
-{
- System.out.println("Invalid");
-}
-}
+
+ class RemoveVowels {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = input.nextLine();
+        String newStr = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (!(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||
+                  c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')) {
+                newStr += c;
+            }
+        }
+        System.out.println("The string without vowels is: " + newStr);
+    }
 }
